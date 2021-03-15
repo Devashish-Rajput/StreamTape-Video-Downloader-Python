@@ -12,9 +12,9 @@ def get():
     chrome_options.add_argument('--headless')
     chrome_options.add_argument('--no-sandbox')
     chrome_options.add_argument('--disable-dev-shm-usage')
-    path_to_extension = '/content/drive/MyDrive/3.5.31_0'
+    path_to_extension = '/content/drive/MyDrive/3.5.31_0' # Path to your adblock extension folder
     chrome_options.add_argument('load-extension=' + path_to_extension)
-    prefs = {'download.default_directory' : '/content/drive/MyDrive/myBot/'}
+    prefs = {'download.default_directory' : '/content/drive/MyDrive/myBot/'} # Your default download location 
     chrome_options.add_experimental_option('prefs', prefs)
     driver =webdriver.Chrome('chromedriver',options=chrome_options)
 
@@ -39,7 +39,7 @@ def get():
         #   print('File expired')
         import time
         import os
-        path = "/content/drive/MyDrive/myBot/"
+        path = "/content/drive/MyDrive/myBot/" # Your default download location
         def download_wait(path):
             t=0
             while True:
