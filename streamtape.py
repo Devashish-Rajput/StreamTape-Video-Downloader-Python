@@ -18,7 +18,7 @@ def get():
     chrome_options.add_experimental_option('prefs', prefs)
     driver =webdriver.Chrome('chromedriver',options=chrome_options)
 
-    with open('/content/drive/MyDrive/Ben 10 OM/urls.txt') as f:
+    with open('urls.txt') as f:
           links = [line.rstrip() for line in f]
     for link in links:
         driver.get(link)
